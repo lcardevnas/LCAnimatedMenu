@@ -21,6 +21,8 @@
 		E9E0F27E18354BA400FC2BD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F26018354BA400FC2BD7 /* UIKit.framework */; };
 		E9E0F28618354BA400FC2BD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9E0F28418354BA400FC2BD7 /* InfoPlist.strings */; };
 		E9E0F28818354BA400FC2BD7 /* LCAnimatedMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F28718354BA400FC2BD7 /* LCAnimatedMenuTests.m */; };
+		E9E0F29418354C9200FC2BD7 /* LCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F29318354C9200FC2BD7 /* LCMenuItem.m */; };
+		E9E0F29718354D4500FC2BD7 /* LCAnimatedMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		E9E0F28318354BA400FC2BD7 /* LCAnimatedMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCAnimatedMenuTests-Info.plist"; sourceTree = "<group>"; };
 		E9E0F28518354BA400FC2BD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E9E0F28718354BA400FC2BD7 /* LCAnimatedMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCAnimatedMenuTests.m; sourceTree = "<group>"; };
+		E9E0F29218354C9200FC2BD7 /* LCMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMenuItem.h; path = LCAnimatedMenu/LCMenuItem.h; sourceTree = "<group>"; };
+		E9E0F29318354C9200FC2BD7 /* LCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCMenuItem.m; path = LCAnimatedMenu/LCMenuItem.m; sourceTree = "<group>"; };
+		E9E0F29518354D4500FC2BD7 /* LCAnimatedMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCAnimatedMenu.h; path = LCAnimatedMenu/LCAnimatedMenu.h; sourceTree = "<group>"; };
+		E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCAnimatedMenu.m; path = LCAnimatedMenu/LCAnimatedMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		E9E0F26218354BA400FC2BD7 /* LCAnimatedMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E9E0F29118354C5500FC2BD7 /* LCAnimatedMenu */,
 				E9E0F26B18354BA400FC2BD7 /* AppDelegate.h */,
 				E9E0F26C18354BA400FC2BD7 /* AppDelegate.m */,
 				E9E0F26E18354BA400FC2BD7 /* Main.storyboard */,
@@ -150,6 +157,17 @@
 				E9E0F28418354BA400FC2BD7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9E0F29118354C5500FC2BD7 /* LCAnimatedMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E9E0F29218354C9200FC2BD7 /* LCMenuItem.h */,
+				E9E0F29318354C9200FC2BD7 /* LCMenuItem.m */,
+				E9E0F29518354D4500FC2BD7 /* LCAnimatedMenu.h */,
+				E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */,
+			);
+			name = LCAnimatedMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +269,9 @@
 			files = (
 				E9E0F27318354BA400FC2BD7 /* ViewController.m in Sources */,
 				E9E0F26D18354BA400FC2BD7 /* AppDelegate.m in Sources */,
+				E9E0F29418354C9200FC2BD7 /* LCMenuItem.m in Sources */,
 				E9E0F26918354BA400FC2BD7 /* main.m in Sources */,
+				E9E0F29718354D4500FC2BD7 /* LCAnimatedMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
