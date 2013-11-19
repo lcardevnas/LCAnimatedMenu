@@ -8,24 +8,47 @@
 
 #import "LCMenuItem.h"
 
+
+@interface LCMenuItem ()
+
+@property (nonatomic, readwrite) NSInteger index;
+@property (strong, nonatomic) UIImage *image;
+
+@end
+
+
 @implementation LCMenuItem
+
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    if (self)
+    {
+        self.backgroundColor = [UIColor clearColor];
     }
+    
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
+    
+    // set de the stroke and fill color of the button
+    [[UIColor grayColor] setStroke];
+    [[UIColor redColor] setFill];
+    
+    // making the rect of the button
+    CGRect rectCircle = CGRectInset(self.bounds, self.bounds.size.width * 0.1f, self.bounds.size.height * 0.1f);
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:rectCircle];
+    
+    // fill the path area
+    [circlePath setLineWidth:4.0];
+    [circlePath stroke];
+    [circlePath fill];
+    
 }
-*/
+
 
 @end
