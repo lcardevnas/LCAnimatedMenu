@@ -11,5 +11,7 @@
 
 @interface LCMenuItem : UIView
 
+- (id)initWithText:(NSString *)text;
+
 
 @end

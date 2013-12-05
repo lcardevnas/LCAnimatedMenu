@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 typedef NS_ENUM(NSInteger, LCAnimatedMenuPosition) {
     LCAnimatedMenuPositionBottom,
     LCAnimatedMenuPositionTop
@@ -23,6 +24,9 @@ typedef NS_ENUM(NSInteger, LCAnimatedMenuPosition) {
 @property (nonatomic) LCAnimatedMenuPosition position;
 
 @property (strong, nonatomic) UIView *containerView;
+
+
+- (instancetype)initWithItems:(NSArray *)items;
 
 
 @end

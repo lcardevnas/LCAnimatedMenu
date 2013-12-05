@@ -22,65 +22,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    [self addButtons];
     
-    LCAnimatedMenu *menu = [[LCAnimatedMenu alloc] initWithFrame:CGRectZero];
+    
+    LCMenuItem *item1 = [[LCMenuItem alloc] initWithText:@"Bubi"];
+    LCMenuItem *item2 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
+    LCMenuItem *item3 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
+    LCMenuItem *item4 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
+    LCMenuItem *item5 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
+    LCMenuItem *item6 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
+    
+    LCAnimatedMenu *menu = [[LCAnimatedMenu alloc] initWithItems:@[item1, item2, item3, item4, item5, item6]];
+    menu.position = LCAnimatedMenuPositionBottom;
     menu.containerView = self.view;
 
 }
-
-
-- (void)addItemWithEntranceAnimation:(UIView *)item withDelay:(NSTimeInterval)delay
-{
-    
-    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
-    
-    NSArray *values = @[@(64), @(-10), @(10), @(0)];
-    animation.values = values;
-    
-    NSArray *times = @[@(0.0), @(0.40), @(0.70), @(0.8)];
-    animation.keyTimes = times;
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    
-    animation.duration = 1;
-    animation.removedOnCompletion = NO;
-    animation.fillMode = kCAFillModeBackwards;
-    animation.beginTime = CACurrentMediaTime() + delay;
-    [item.layer addAnimation:animation forKey:@"Entrance"];
-    
-}
-
-
-- (void)addButtons
-{
-    CGRect positionFrame = CGRectMake(self.view.bounds.size.width - 64, self.view.bounds.size.height - 64, 50, 50);
-    LCMenuItem *item1 = [[LCMenuItem alloc] initWithFrame:positionFrame];
-    [self.view addSubview:item1];
-    
-    [self addItemWithEntranceAnimation:item1 withDelay:0.3];
-    
-    positionFrame = CGRectMake(self.view.bounds.size.width - 128, self.view.bounds.size.height - 64, 50, 50);
-    LCMenuItem *item2 = [[LCMenuItem alloc] initWithFrame:positionFrame];
-    [self.view addSubview:item2];
-    
-    [self addItemWithEntranceAnimation:item2 withDelay:0.8];
-}
-
-
-- (IBAction)fire:(id)sender
-{
-    for (UIView *view in self.view.subviews)
-    {
-        if ([view isMemberOfClass:NSClassFromString(@"LCMenuItem")])
-        {
-            [view removeFromSuperview];
-        }
-    }
-    
-    [self addButtons];
-}
-
 
 
 
