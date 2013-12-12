@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LCAnimatedMenu.h"
 
-@interface ViewController : UIViewController
+
+@interface WithBarsViewController : UIViewController <LCAnimatedMenuDelegate>
 
 @end

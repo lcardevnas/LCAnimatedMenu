@@ -1,10 +1,34 @@
-//
-//  LCMenuItem.m
-//  LCAnimatedMenu
-//
-//  Created by ThXou on 14/11/13.
-//  Copyright (c) 2013 ThXou. All rights reserved.
-//
+
+/*
+ 
+ The MIT License (MIT)
+ 
+ Copyright (c) 2013 Luis Cardenas. All rights reserved.
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ 
+ 
+ This file is part of LCAnimatedMenu.
+ Created by Luis Cardenas (ThXou)
+ http://www.thxou.com
+ 
+ */
 
 #import "LCMenuItem.h"
 
@@ -17,6 +41,9 @@
 @property (copy, nonatomic) NSString *text;
 
 @end
+
+
+NSString *LCMenuItemDidButtonPressed = @"kLCMenuItemDidButtonPressed";
 
 
 @implementation LCMenuItem
@@ -32,17 +59,33 @@
         
         self.backgroundColor = [UIColor clearColor];
         self.opaque = NO;
+        
+        if (!_innerColor) _innerColor = [UIColor colorWithWhite:1.0f alpha:0.7f];
+        if (!_borderColor) _borderColor = [UIColor grayColor];
+        if (!_lineWidth) _lineWidth = 1.0;
     }
     
     return self;
 }
 
 
-- (id)initWithText:(NSString *)text
+- (id)initWithImage:(UIImage *)image
 {
-    if (text)
+    if (image)
     {
-        _text = text;
+        _image = image;
+    }
+    
+    return [self initWithFrame:CGRectZero];
+}
+
+
+- (id)initWithImage:(UIImage *)image withActionBlock:(ActionBlock)actionBlock
+{
+    if (image)
+    {
+        _image = image;
+        _actionBlock = actionBlock;
     }
     
     return [self initWithFrame:CGRectZero];
@@ -57,57 +100,46 @@
     CGRect rectCircle = CGRectInset(self.bounds, self.bounds.size.width * 0.04f, self.bounds.size.height * 0.04f);
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:rectCircle];
     
+    [self.borderColor setStroke];
+    [self.innerColor setFill];
     
-    // set the text
+    [circlePath fill];
+    [circlePath setLineWidth:self.lineWidth];
+    [circlePath stroke];
     
-    if (self.text)
+    
+    // set the image
+    
+    UIButton *itemButton = [[UIButton alloc] initWithFrame:self.bounds];
+    [itemButton addTarget:self
+                   action:@selector(buttonAction:)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    if (self.image)
     {
-        NSShadow *shadow = [[NSShadow alloc] init];
-        shadow.shadowOffset = CGSizeMake(-1, -1);
-        
-        UIFont *font = [UIFont boldSystemFontOfSize:17.0f];
-        
-        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-        [style setAlignment:NSTextAlignmentCenter];
-        
-        NSDictionary *attr = @{
-                               NSParagraphStyleAttributeName : style,
-                               NSFontAttributeName : font,
-                               NSShadowAttributeName : shadow,
-                               NSForegroundColorAttributeName : [UIColor yellowColor]
-                               };
-        
-        NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:self.text attributes:attr];
-        
-        UILabel *textLabel = [[UILabel alloc] initWithFrame:self.bounds];
-        textLabel.textAlignment = NSTextAlignmentCenter;
-        textLabel.attributedText = attrString;
-        textLabel.numberOfLines = 0;
-        [self addSubview:textLabel];
-        /*
-        NSLog(@"CENTER: %@", NSStringFromCGPoint(self.center));
-        NSLog(@"FRAME: %@", NSStringFromCGRect(self.frame));
-        NSLog(@"BOUNDS: %@", NSStringFromCGRect(self.bounds));
-        [self.text drawAtPoint:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2)
-                withAttributes:attr];
-//        [self.text drawInRect:rectCircle
-//               withAttributes:attr];*/
+        [itemButton setImage:self.image forState:UIControlStateNormal];
+        [itemButton setContentMode:UIViewContentModeCenter];
     }
     
-    
-    // set de the stroke and fill color of the button
-    
-    [[UIColor grayColor] setStroke];
-    [[UIColor redColor] setFill];
-    
-    
-    // fill the path area
-    
-    [circlePath setLineWidth:4.0];
-    [circlePath stroke];
-    [circlePath fill];
+    [self addSubview:itemButton];
     
 }
+
+
+
+#pragma mark - Private methods
+
+- (void)buttonAction:(UIButton *)sender
+{
+    if (self.actionBlock) {
+        self.actionBlock();
+    }
+    
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:LCMenuItemDidButtonPressed
+                                      object:self];
+}
+
 
 
 @end

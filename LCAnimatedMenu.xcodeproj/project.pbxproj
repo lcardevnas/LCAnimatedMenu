@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9696D551847FF3C00D687F0 /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E9696D541847FF3C00D687F0 /* bg.jpeg */; };
+		E90DCB4B1851016100402317 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DCB4A1851016100402317 /* MapKit.framework */; };
+		E9842BFF185A304500A8ABC6 /* WithoutBarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9842BFE185A304500A8ABC6 /* WithoutBarsViewController.m */; };
 		E98E6EDA183A8DE300A8BD3C /* LCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E98E6ED9183A8DE300A8BD3C /* LCMenuItem.m */; };
 		E9E0F25D18354BA400FC2BD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F25C18354BA400FC2BD7 /* Foundation.framework */; };
 		E9E0F25F18354BA400FC2BD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F25E18354BA400FC2BD7 /* CoreGraphics.framework */; };
@@ -16,7 +17,7 @@
 		E9E0F26918354BA400FC2BD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F26818354BA400FC2BD7 /* main.m */; };
 		E9E0F26D18354BA400FC2BD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F26C18354BA400FC2BD7 /* AppDelegate.m */; };
 		E9E0F27018354BA400FC2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0F26E18354BA400FC2BD7 /* Main.storyboard */; };
-		E9E0F27318354BA400FC2BD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F27218354BA400FC2BD7 /* ViewController.m */; };
+		E9E0F27318354BA400FC2BD7 /* WithBarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F27218354BA400FC2BD7 /* WithBarsViewController.m */; };
 		E9E0F27518354BA400FC2BD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9E0F27418354BA400FC2BD7 /* Images.xcassets */; };
 		E9E0F27C18354BA400FC2BD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F27B18354BA400FC2BD7 /* XCTest.framework */; };
 		E9E0F27D18354BA400FC2BD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F25C18354BA400FC2BD7 /* Foundation.framework */; };
@@ -37,7 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E9696D541847FF3C00D687F0 /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
+		E90DCB4A1851016100402317 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E9842BFD185A304500A8ABC6 /* WithoutBarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutBarsViewController.h; sourceTree = "<group>"; };
+		E9842BFE185A304500A8ABC6 /* WithoutBarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutBarsViewController.m; sourceTree = "<group>"; };
 		E98E6ED8183A8DE300A8BD3C /* LCMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMenuItem.h; path = LCAnimatedMenu/LCMenuItem.h; sourceTree = "<group>"; };
 		E98E6ED9183A8DE300A8BD3C /* LCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCMenuItem.m; path = LCAnimatedMenu/LCMenuItem.m; sourceTree = "<group>"; };
 		E9E0F25918354BA400FC2BD7 /* LCAnimatedMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCAnimatedMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,8 +54,8 @@
 		E9E0F26B18354BA400FC2BD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9E0F26C18354BA400FC2BD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E9E0F26F18354BA400FC2BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E9E0F27118354BA400FC2BD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9E0F27218354BA400FC2BD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E9E0F27118354BA400FC2BD7 /* WithBarsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithBarsViewController.h; sourceTree = "<group>"; };
+		E9E0F27218354BA400FC2BD7 /* WithBarsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithBarsViewController.m; sourceTree = "<group>"; };
 		E9E0F27418354BA400FC2BD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E9E0F27A18354BA400FC2BD7 /* LCAnimatedMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCAnimatedMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E0F27B18354BA400FC2BD7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90DCB4B1851016100402317 /* MapKit.framework in Frameworks */,
 				E9E0F25F18354BA400FC2BD7 /* CoreGraphics.framework in Frameworks */,
 				E9E0F26118354BA400FC2BD7 /* UIKit.framework in Frameworks */,
 				E9E0F25D18354BA400FC2BD7 /* Foundation.framework in Frameworks */,
@@ -109,6 +113,7 @@
 		E9E0F25B18354BA400FC2BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E90DCB4A1851016100402317 /* MapKit.framework */,
 				E9E0F25C18354BA400FC2BD7 /* Foundation.framework */,
 				E9E0F25E18354BA400FC2BD7 /* CoreGraphics.framework */,
 				E9E0F26018354BA400FC2BD7 /* UIKit.framework */,
@@ -123,10 +128,11 @@
 				E9E0F29118354C5500FC2BD7 /* LCAnimatedMenu */,
 				E9E0F26B18354BA400FC2BD7 /* AppDelegate.h */,
 				E9E0F26C18354BA400FC2BD7 /* AppDelegate.m */,
+				E9E0F27118354BA400FC2BD7 /* WithBarsViewController.h */,
+				E9E0F27218354BA400FC2BD7 /* WithBarsViewController.m */,
+				E9842BFD185A304500A8ABC6 /* WithoutBarsViewController.h */,
+				E9842BFE185A304500A8ABC6 /* WithoutBarsViewController.m */,
 				E9E0F26E18354BA400FC2BD7 /* Main.storyboard */,
-				E9E0F27118354BA400FC2BD7 /* ViewController.h */,
-				E9E0F27218354BA400FC2BD7 /* ViewController.m */,
-				E9696D541847FF3C00D687F0 /* bg.jpeg */,
 				E9E0F27418354BA400FC2BD7 /* Images.xcassets */,
 				E9E0F26318354BA400FC2BD7 /* Supporting Files */,
 			);
@@ -249,7 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9696D551847FF3C00D687F0 /* bg.jpeg in Resources */,
 				E9E0F27518354BA400FC2BD7 /* Images.xcassets in Resources */,
 				E9E0F26718354BA400FC2BD7 /* InfoPlist.strings in Resources */,
 				E9E0F27018354BA400FC2BD7 /* Main.storyboard in Resources */,
@@ -272,10 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98E6EDA183A8DE300A8BD3C /* LCMenuItem.m in Sources */,
-				E9E0F27318354BA400FC2BD7 /* ViewController.m in Sources */,
+				E9E0F27318354BA400FC2BD7 /* WithBarsViewController.m in Sources */,
 				E9E0F26D18354BA400FC2BD7 /* AppDelegate.m in Sources */,
 				E9E0F26918354BA400FC2BD7 /* main.m in Sources */,
 				E9E0F29718354D4500FC2BD7 /* LCAnimatedMenu.m in Sources */,
+				E9842BFF185A304500A8ABC6 /* WithoutBarsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
