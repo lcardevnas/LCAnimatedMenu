@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E90DCB4B1851016100402317 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DCB4A1851016100402317 /* MapKit.framework */; };
+		E9269E70185A816F001A966B /* LCAnimatedMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E9269E6D185A816F001A966B /* LCAnimatedMenu.m */; };
+		E9269E71185A816F001A966B /* LCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9269E6F185A816F001A966B /* LCMenuItem.m */; };
 		E9842BFF185A304500A8ABC6 /* WithoutBarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9842BFE185A304500A8ABC6 /* WithoutBarsViewController.m */; };
-		E98E6EDA183A8DE300A8BD3C /* LCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E98E6ED9183A8DE300A8BD3C /* LCMenuItem.m */; };
 		E9E0F25D18354BA400FC2BD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F25C18354BA400FC2BD7 /* Foundation.framework */; };
 		E9E0F25F18354BA400FC2BD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F25E18354BA400FC2BD7 /* CoreGraphics.framework */; };
 		E9E0F26118354BA400FC2BD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F26018354BA400FC2BD7 /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		E9E0F27E18354BA400FC2BD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E0F26018354BA400FC2BD7 /* UIKit.framework */; };
 		E9E0F28618354BA400FC2BD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9E0F28418354BA400FC2BD7 /* InfoPlist.strings */; };
 		E9E0F28818354BA400FC2BD7 /* LCAnimatedMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F28718354BA400FC2BD7 /* LCAnimatedMenuTests.m */; };
-		E9E0F29718354D4500FC2BD7 /* LCAnimatedMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +39,12 @@
 
 /* Begin PBXFileReference section */
 		E90DCB4A1851016100402317 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E9269E6C185A816F001A966B /* LCAnimatedMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAnimatedMenu.h; sourceTree = "<group>"; };
+		E9269E6D185A816F001A966B /* LCAnimatedMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAnimatedMenu.m; sourceTree = "<group>"; };
+		E9269E6E185A816F001A966B /* LCMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCMenuItem.h; sourceTree = "<group>"; };
+		E9269E6F185A816F001A966B /* LCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCMenuItem.m; sourceTree = "<group>"; };
 		E9842BFD185A304500A8ABC6 /* WithoutBarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutBarsViewController.h; sourceTree = "<group>"; };
 		E9842BFE185A304500A8ABC6 /* WithoutBarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutBarsViewController.m; sourceTree = "<group>"; };
-		E98E6ED8183A8DE300A8BD3C /* LCMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMenuItem.h; path = LCAnimatedMenu/LCMenuItem.h; sourceTree = "<group>"; };
-		E98E6ED9183A8DE300A8BD3C /* LCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCMenuItem.m; path = LCAnimatedMenu/LCMenuItem.m; sourceTree = "<group>"; };
 		E9E0F25918354BA400FC2BD7 /* LCAnimatedMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCAnimatedMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E0F25C18354BA400FC2BD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9E0F25E18354BA400FC2BD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +64,6 @@
 		E9E0F28318354BA400FC2BD7 /* LCAnimatedMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCAnimatedMenuTests-Info.plist"; sourceTree = "<group>"; };
 		E9E0F28518354BA400FC2BD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E9E0F28718354BA400FC2BD7 /* LCAnimatedMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCAnimatedMenuTests.m; sourceTree = "<group>"; };
-		E9E0F29518354D4500FC2BD7 /* LCAnimatedMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCAnimatedMenu.h; path = LCAnimatedMenu/LCAnimatedMenu.h; sourceTree = "<group>"; };
-		E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCAnimatedMenu.m; path = LCAnimatedMenu/LCAnimatedMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9269E6B185A816F001A966B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E9269E6C185A816F001A966B /* LCAnimatedMenu.h */,
+				E9269E6D185A816F001A966B /* LCAnimatedMenu.m */,
+				E9269E6E185A816F001A966B /* LCMenuItem.h */,
+				E9269E6F185A816F001A966B /* LCMenuItem.m */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
 		E9E0F25018354BA400FC2BD7 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +136,7 @@
 		E9E0F26218354BA400FC2BD7 /* LCAnimatedMenu */ = {
 			isa = PBXGroup;
 			children = (
-				E9E0F29118354C5500FC2BD7 /* LCAnimatedMenu */,
+				E9269E6B185A816F001A966B /* Source */,
 				E9E0F26B18354BA400FC2BD7 /* AppDelegate.h */,
 				E9E0F26C18354BA400FC2BD7 /* AppDelegate.m */,
 				E9E0F27118354BA400FC2BD7 /* WithBarsViewController.h */,
@@ -166,17 +177,6 @@
 				E9E0F28418354BA400FC2BD7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E9E0F29118354C5500FC2BD7 /* LCAnimatedMenu */ = {
-			isa = PBXGroup;
-			children = (
-				E98E6ED8183A8DE300A8BD3C /* LCMenuItem.h */,
-				E98E6ED9183A8DE300A8BD3C /* LCMenuItem.m */,
-				E9E0F29518354D4500FC2BD7 /* LCAnimatedMenu.h */,
-				E9E0F29618354D4500FC2BD7 /* LCAnimatedMenu.m */,
-			);
-			name = LCAnimatedMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98E6EDA183A8DE300A8BD3C /* LCMenuItem.m in Sources */,
+				E9269E71185A816F001A966B /* LCMenuItem.m in Sources */,
 				E9E0F27318354BA400FC2BD7 /* WithBarsViewController.m in Sources */,
 				E9E0F26D18354BA400FC2BD7 /* AppDelegate.m in Sources */,
 				E9E0F26918354BA400FC2BD7 /* main.m in Sources */,
-				E9E0F29718354D4500FC2BD7 /* LCAnimatedMenu.m in Sources */,
 				E9842BFF185A304500A8ABC6 /* WithoutBarsViewController.m in Sources */,
+				E9269E70185A816F001A966B /* LCAnimatedMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
