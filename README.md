@@ -45,9 +45,17 @@ There are few methods to create both objects. For **LCMenuItem** there are two:
 - (id)initWithImage:(UIImage *)image withActionBlock:(ActionBlock)actionBlock;
 ```
 
-The first initialize an item with an image and the second initializes an item with an image and an action block. The image can cover all the button view and to be of any size. The layer mask clips the image (assigned to the image property of a UIButton object) to the item bounds and the internal behavior resize the button to a `50x50` size.
+The first initializes an item with an image and the second initializes an item with an image and an action block. The image can cover all the button view and to be of any size. The layer mask, clips the image (assigned to the image property of a UIButton object) to the item bounds and the internal behavior resizes the button to a `50x50` size.
 
 You can initialize an item without an image using the `initWithFrame:` method.
+
+For the **LCAnimatedMenu** you have only one method:
+
+```objectivec
+- (id)initWithItems:(NSArray *)items;
+```
+
+
 
 How to put it in my code?
 ==============
