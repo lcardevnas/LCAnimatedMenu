@@ -75,10 +75,9 @@
 }
 
 
-- (id)initWithItems:(NSArray *)items
+- (instancetype)initWithItems:(NSArray *)items
 {
-    if (items)
-    {
+    if (items) {
         _items = [items mutableCopy];
     }
     
@@ -169,15 +168,12 @@
     
     NSArray *animationKeyTimes = @[ @(0.0), @(0.4), @(0.7), @(0.8) ];
     
-    
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
-    
     animation.values = [self animationValues];
     animation.keyTimes = animationKeyTimes;
     
     
     CAKeyframeAnimation *opacity = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
-    
     opacity.values = @[ @(0.0), @(0.5), @(1.0), @(1.0) ];
     opacity.keyTimes = animationKeyTimes;
     

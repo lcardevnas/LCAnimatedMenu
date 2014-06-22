@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, LCAnimatedMenuPosition)
 @property (weak, nonatomic) id <LCAnimatedMenuDelegate> delegate;
 
 
-- (id)initWithItems:(NSArray *)items;
+- (instancetype)initWithItems:(NSArray *)items;
 
 
 @end
