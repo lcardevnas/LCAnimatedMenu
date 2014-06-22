@@ -10,6 +10,8 @@ Basically, the library is composed by a couple of UIView subclasses: LCAnimatedM
 CocoaPods
 ==============
 
+Add this line to your podfile:
+
 ```ruby
 pod 'LCAnimatedMenu', '1.0.0'
 ```
@@ -49,8 +51,9 @@ Initialization methods
 
 There are few methods to create both objects. For **LCMenuItem** there are two:
 
-```ruby
-pod 'LCAnimatedMenu', '1.0.0'
+```objective-c
+- (id)initWithImage:(UIImage *)image;
+- (id)initWithImage:(UIImage *)image withActionBlock:(ActionBlock)actionBlock;
 ```
 
 The first initializes an item with an image and the second initializes an item with an image and an action block. The image can cover all the button view and to be of any size. The layer mask, clips the image (assigned to the image property of a UIButton object) to the item bounds and the internal behavior resizes the button to a `50x50` size.
