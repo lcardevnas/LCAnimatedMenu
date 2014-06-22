@@ -1,7 +1,7 @@
 Overview
 ==============
 
-<img src="menu2.png" width="200" height="300" /><img src="menu3.png" width="200" height="300" />
+<img src="menu2.png" width="49%" />&nbsp;&nbsp;<img src="menu3.png" width="49%" />
 
 A couple of UIView subclasses that allows you to include an animated menu in your own iOS applications.
 
