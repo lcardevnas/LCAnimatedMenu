@@ -47,7 +47,7 @@ Initialization methods
 
 There are few methods to create both objects. For **LCMenuItem** there are two:
 
-```perl
+```ruby
 pod 'LCAnimatedMenu', '1.0.0'
 ```
 
@@ -57,7 +57,7 @@ You can initialize an item without an image using the `initWithFrame:` method.
 
 For the **LCAnimatedMenu** class you have only one method:
 
-```objectivec
+```objective-c
 - (id)initWithItems:(NSArray *)items;
 ```
 
@@ -70,14 +70,14 @@ It's easy. Follow these few steps:
 
 **1. Importing classes:** Import both clases in your `.m` file (Unless your are implementing the protocol methods):
 
-```objectivec
+```objective-c
 #import "LCAnimatedMenu.h"
 #import "LCMenuItem.h"
 ```
 
 **2. Creating items:** In the method `viewWillAppear:`, create as much items as you need. You can initialize an item in many ways, I'll show you two. First, passing the actionBlock property with the inicialization method as an argument:
 
-```objectivec
+```objective-c
 LCMenuItem *item1 = [[LCMenuItem alloc] initWithImage:[UIImage imageNamed:@"item.png"]
                                       withActionBlock:^(void)
                          {
@@ -87,7 +87,7 @@ LCMenuItem *item1 = [[LCMenuItem alloc] initWithImage:[UIImage imageNamed:@"item
 
 Or as I prefer, setting the actionBlock property after initialization:
 
-```objectivec
+```objective-c
 LCMenuItem *item1 = [[LCMenuItem alloc] initWithImage:[UIImage imageNamed:@"item.png"]];
 item1.actionBlock = ^(void)
 {
@@ -97,37 +97,37 @@ item1.actionBlock = ^(void)
 
 Both of them do the same work. I leave that decision to you. However, if you don't want to initialize with an image, you can use the `initWithFrame:` method:
 
-```objectivec
+```objective-c
 LCMenuItem *item1 = [[LCMenuItem alloc] initWithFrame:CGRectZero];
 ```
 
 **3. Initializing the menu:** Initialize the LCAnimatedMenu object passing in the argument the items previously created:
 
-```objectivec
+```objective-c
 LCAnimatedMenu *menu = [[LCAnimatedMenu alloc] initWithItems:@[item1, item2, item3, item4, item5, item6]];
 ```
 
 If you want to the class to be the delegate of the `LCAnimatedMenuDelegate` protocol, you have to set the `delegate` property to your view controller (and of course, make the class conforms to the protocol):
 
-```objectivec
+```objective-c
 menu.delegate = self;
 ```
 
 If you want that the menu to be displayed at the top of the screen, set the `position` property:
 
-```objectivec
+```objective-c
 menu.position = LCAnimatedMenuPositionTop;
 ```
 
 Furthermore, if your screen has an status bar and a navigation bar, and you don't want the menu to be displayed under those bars, you need to set the `showBelowTopBars` property to `YES`:
 
-```objectivec
+```objective-c
 menu.showBelowTopBars = YES;
 ```
 
 The last and more important thing to do is set the containerView property. It is usually `self.view` if you want to show the menu in a normal screen managed by an UIViewController subclass, but you can use any custom view that you want:
 
-```objectivec
+```objective-c
 menu.containerView = self.view;
 ```
 
@@ -136,7 +136,7 @@ Protocol methods
 
 This little library has a protocol methods, which warns you when the menu is about to be displayed, has been displayed and is about to be hidden respectively:
 
-```objectivec
+```objective-c
 - (void)willDisplayAnimatedMenu:(LCAnimatedMenu *)animatedMenu;
 - (void)didDisplayAnimatedMenu:(LCAnimatedMenu *)animatedMenu;
 - (void)willHideAnimatedMenu:(LCAnimatedMenu *)animatedMenu;
