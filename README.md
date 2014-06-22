@@ -7,6 +7,11 @@ A couple of UIView subclasses that allows you to include an animated menu in you
 
 Basically, the library is composed by a couple of UIView subclasses: LCAnimatedMenu and LCMenuItem. LCAnimatedMenu acts as a container for LCMenuItem objects (we'll call them items).  You can add as many items as you want, but only five items will be displayed on screen. Since, all the items are added to a scroll view, you can scroll the menu to see the rest of the items previously added. The LCAnimatedMenu class is in charge of animating the entrance of all the items.
 
+CocoaPods
+==============
+
+
+
 Properties
 ==============
 
@@ -42,9 +47,8 @@ Initialization methods
 
 There are few methods to create both objects. For **LCMenuItem** there are two:
 
-```objectivec
-- (id)initWithImage:(UIImage *)image;
-- (id)initWithImage:(UIImage *)image withActionBlock:(ActionBlock)actionBlock;
+```perl
+pod 'LCAnimatedMenu', '1.0.0'
 ```
 
 The first initializes an item with an image and the second initializes an item with an image and an action block. The image can cover all the button view and to be of any size. The layer mask, clips the image (assigned to the image property of a UIButton object) to the item bounds and the internal behavior resizes the button to a `50x50` size.
