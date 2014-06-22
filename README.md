@@ -1,9 +1,7 @@
 Overview
 ==============
 
-![LCAnimatedMenu 1](menu2.png "LCAnimatedMenu 1")
-![LCAnimatedMenu 2](menu3.png "LCAnimatedMenu 2")
-
+<img src="menu2.png" width="200" height="300" /><img src="menu3.png" width="200" height="300" />
 
 A couple of UIView subclasses that allows you to include an animated menu in your own iOS applications.
 
