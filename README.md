@@ -10,7 +10,9 @@ Basically, the library is composed by a couple of UIView subclasses: LCAnimatedM
 CocoaPods
 ==============
 
-
+```ruby
+pod 'LCAnimatedMenu', '1.0.0'
+```
 
 Properties
 ==============
