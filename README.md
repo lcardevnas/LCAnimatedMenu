@@ -1,6 +1,10 @@
 Overview
 ==============
 
+![LCAnimatedMenu 1](menu2.png "LCAnimatedMenu 1")
+![LCAnimatedMenu 2](menu3.png "LCAnimatedMenu 2")
+
+
 A couple of UIView subclasses that allows you to include an animated menu in your own iOS applications.
 
 Basically, the library is composed by a couple of UIView subclasses: LCAnimatedMenu and LCMenuItem. LCAnimatedMenu acts as a container for LCMenuItem objects (we'll call them items).  You can add as many items as you want, but only five items will be displayed on screen. Since, all the items are added to a scroll view, you can scroll the menu to see the rest of the items previously added. The LCAnimatedMenu class is in charge of animating the entrance of all the items.
