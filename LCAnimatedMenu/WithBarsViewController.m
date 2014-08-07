@@ -21,10 +21,9 @@
 @implementation WithBarsViewController
 
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLoad
 {
-    [super viewWillAppear:animated];
-    
+    [super viewDidLoad];
     
     UIImage *itemImage = [UIImage imageNamed:@"item.png"];
     ActionBlock actionBlock = ^(void)
@@ -47,7 +46,6 @@
     menu.showBelowTopBars = YES;
     menu.delegate = self;
     menu.containerView = self.view;
-    
 }
 
 
