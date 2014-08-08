@@ -13,7 +13,7 @@ CocoaPods
 Add this line to your podfile:
 
 ```ruby
-pod 'LCAnimatedMenu', '1.0.0'
+pod 'LCAnimatedMenu', '~> 1.0'
 ```
 
 Properties
@@ -128,6 +128,12 @@ Furthermore, if your screen has an status bar and a navigation bar, and you don'
 
 ```objective-c
 menu.showBelowTopBars = YES;
+```
+
+By default, when you tap a menu button, the menu automatically hides. To avoid this, set the property `hideMenuAfterTapping` to `YES`:
+
+```objective-c
+menu.hideMenuAfterTapping = YES;
 ```
 
 The last and more important thing to do is set the containerView property. It is usually `self.view` if you want to show the menu in a normal screen managed by an UIViewController subclass, but you can use any custom view that you want:
