@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, LCAnimatedMenuPosition)
 @property (nonatomic) NSTimeInterval animationDuration;
 @property (nonatomic) LCAnimatedMenuPosition position;
 @property (nonatomic) BOOL showBelowTopBars;
+@property (nonatomic) BOOL hideMenuAfterTapping;
 
 @property (weak, nonatomic) id <LCAnimatedMenuDelegate> delegate;
 

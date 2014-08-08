@@ -59,6 +59,7 @@
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
         self.showBelowTopBars = NO;
+        self.hideMenuAfterTapping = YES;
         
         _delay = 0.3;
         _animationDuration = 1.0;
@@ -230,13 +231,16 @@
     
     if (item.actionBlock)
     {
-        [UIView animateWithDuration:0.2f
-                         animations:^{
-                             self.alpha = 0.0f;
-                         }
-                         completion:^(BOOL finished) {
-                             [self removeFromSuperview];
-                         }];
+        if (self.hideMenuAfterTapping)
+        {
+            [UIView animateWithDuration:0.2f
+                             animations:^{
+                                 self.alpha = 0.0f;
+                             }
+                             completion:^(BOOL finished) {
+                                 [self removeFromSuperview];
+                             }];
+        }
     }
     
 }
