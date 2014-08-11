@@ -1,5 +1,8 @@
 Overview
 ==============
+[![Pod Version](http://img.shields.io/cocoapods/v/LCAnimatedMenu.svg?style=flat)](https://github.com/ThXou/LCAnimatedMenu)
+[![Pod Platform](http://img.shields.io/cocoapods/p/LCAnimatedMenu.svg?style=flat)](https://github.com/ThXou/LCAnimatedMenu)
+[![Pod License](http://img.shields.io/cocoapods/l/LCAnimatedMenu.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 <img src="menu2.png" width="49%" />&nbsp;&nbsp;<img src="menu3.png" width="49%" />
 
